@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ilj2mersy8rv"]
+
+[ext_resource type="Texture2D" uid="uid://dbg545qc3bxc5" path="res://art/background/bn.png" id="1_e8fi5"]
+[ext_resource type="Shader" path="res://background.gdshader" id="4_p54k8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g6i8e"]
+shader = ExtResource("4_p54k8")
+shader_parameter/scroll_speed = 0.3
+
+[node name="Background" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_g6i8e")
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_e8fi5")
+stretch_mode = 1
