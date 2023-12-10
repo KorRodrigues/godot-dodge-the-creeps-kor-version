@@ -13,10 +13,10 @@ func _process(delta):
 	
 func gain_exp():
 	var lvl_exp = $Player.level_up()
-
 	$HUD.update_level(lvl_exp[0], lvl_exp[1])
 
 func game_over():
+	$Control/joystick.hide()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$MobTimer.wait_time = 1
@@ -29,6 +29,7 @@ func new_game():
 	score = 0
 	$Player.start($StartPosition.position)
 	$Player.reset()
+	$Control/joystick.show()
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.update_level(1, 0)

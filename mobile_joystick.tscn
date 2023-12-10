@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ot1bf37qgmbq"]
+
+[ext_resource type="Script" path="res://mobile_joystick.gd" id="1_ljsh7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ikfdy"]
+radius = 90.0
+
+[node name="MobileJoystick" type="CanvasLayer"]
+script = ExtResource("1_ljsh7")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(122, 596)
+shape = SubResource("CircleShape2D_ikfdy")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.427451, 0, 0.619608, 0.509804)
+polygon = PackedVector2Array(121, 506, 146, 509, 168, 518, 185, 532, 200, 551, 210, 575, 212, 596, 209, 619, 200, 641, 186, 660, 167, 675, 146, 683, 121, 686, 97, 683, 76, 674, 57, 659, 43, 641, 35, 618, 32, 596, 35, 573, 44, 551, 58, 532, 77, 518, 99, 508)
