@@ -91,5 +91,4 @@ func find_closest_mob():
 			distance_away = distance
 			return_node = target_group[index]
 	var angle = position.angle_to_point(return_node.position)
-	print(angle)
 	return angle
